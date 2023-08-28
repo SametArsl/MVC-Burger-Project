@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using MVC_Burger_Project.DAL;
 using MVC_Burger_Project.Models.Entities;
 
@@ -50,6 +51,13 @@ namespace MVC_Burger_Project
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(
+            //Path.Combine(builder.Environment.ContentRootPath, "burgerdoc")),
+            //    RequestPath = "/Content"
+            //});
 
             app.UseEndpoints(endpoints =>
             {
