@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_Burger_Project.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230827132022_initdb")]
+    [Migration("20230828070159_initdb")]
     partial class initdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -175,14 +175,14 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             Id = 1,
-                            ConcurrencyStamp = "e798af4f-47aa-4f1a-8f66-f0b6929da867",
+                            ConcurrencyStamp = "eb8d917a-03f9-4f8a-97bc-da0405cc00da",
                             Name = "Manager",
                             NormalizedName = "MANAGER"
                         },
                         new
                         {
                             Id = 2,
-                            ConcurrencyStamp = "8beb39fa-a8a8-4f5f-9a7d-3d0672c01362",
+                            ConcurrencyStamp = "5032ef61-6d1d-4ddd-af69-c997ec47ca49",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         });
@@ -349,7 +349,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 1,
                             CategoryID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4744),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4857),
                             Description = "A timeless favorite made with juicy beef patty, fresh lettuce, ripe tomatoes, and our special house sauce.",
                             Name = "Classic Beef Burger",
                             Picture = "classicbeefburger.jpg",
@@ -360,7 +360,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 2,
                             CategoryID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4747),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4860),
                             Description = "Indulge in the rich flavors of our savory beef patty topped with melted cheese, caramelized onions, and tangy pickles.",
                             Name = "Savory Beef Burger",
                             Picture = "savorybeefburger.jpg",
@@ -371,7 +371,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 3,
                             CategoryID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4748),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4862),
                             Description = "For those who crave heat, our spicy beef burger features a fiery patty, jalapeños, and pepper jack cheese.",
                             Name = "Spicy Beef Burger",
                             Picture = "spicybeefburger.jpg",
@@ -382,7 +382,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 4,
                             CategoryID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4749),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4863),
                             Description = "Double the cheese, double the satisfaction! Enjoy our beef patty layered with multiple cheese varieties and a burst of flavors.",
                             Name = "Cheese Lover's Beef Burger",
                             Picture = "cheeseloversbeefburger.jpg",
@@ -393,7 +393,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 5,
                             CategoryID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4751),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4864),
                             Description = "Dive into the smoky goodness of our BBQ beef burger, featuring a char-grilled patty, crispy bacon, and tangy barbecue sauce.",
                             Name = "BBQ Beef Burger",
                             Picture = "bbqbeefburger.jpg",
@@ -404,7 +404,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 6,
                             CategoryID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4752),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4866),
                             Description = "A gourmet delight with a beef patty topped with sautéed mushrooms and melted Swiss cheese.",
                             Name = "Mushroom Swiss Beef Burger",
                             Picture = "mushroomswissbeefburger.jpg",
@@ -415,7 +415,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 7,
                             CategoryID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4753),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4867),
                             Description = "For the bacon enthusiasts, our deluxe beef burger includes a generous helping of crispy bacon, lettuce, and creamy mayo.",
                             Name = "Bacon Deluxe Beef Burger",
                             Picture = "bacondeluxebeefburger.jpg",
@@ -426,7 +426,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 8,
                             CategoryID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4755),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4869),
                             Description = "When one patty isn't enough, enjoy the indulgence of a double beef patty burger with all your favorite toppings.",
                             Name = "Double Patty Beef Burger",
                             Picture = "doublepattybeefburger.jpg",
@@ -437,7 +437,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 9,
                             CategoryID = 2,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4756),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4870),
                             Description = "A healthier option featuring a tender grilled chicken patty, lettuce, tomatoes, and zesty herb mayo.",
                             Name = "Grilled Chicken Burger",
                             Picture = "grilledchickenburger.jpg",
@@ -448,7 +448,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 10,
                             CategoryID = 2,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4757),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4871),
                             Description = "Satisfy your cravings with our crispy fried chicken patty topped with fresh veggies and tangy sauce.",
                             Name = "Crispy Chicken Burger",
                             Picture = "crispychickenburger.jpg",
@@ -459,7 +459,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 11,
                             CategoryID = 3,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4759),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4873),
                             Description = "A garden-fresh delight with a hearty veggie patty, lettuce, tomatoes, and a drizzle of balsamic glaze.",
                             Name = "Veggie Delight Burger",
                             Picture = "veggiedelightburger.jpg",
@@ -470,7 +470,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 12,
                             CategoryID = 3,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4760),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4874),
                             Description = "Experience the earthy flavors of our portobello mushroom patty topped with roasted red peppers and garlic aioli.",
                             Name = "Portobello Mushroom Burger",
                             Picture = "portobellomushroomburger.jpg",
@@ -481,7 +481,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 13,
                             CategoryID = 4,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4761),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4875),
                             Description = "A feast for plant-based eaters, our ultimate vegan burger features a protein-rich patty, avocado, and cashew cream sauce.",
                             Name = "Ultimate Vegan Burger",
                             Picture = "ultimateveganburger.jpg",
@@ -492,7 +492,7 @@ namespace MVC_Burger_Project.Migrations
                         {
                             ID = 14,
                             CategoryID = 4,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4764),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4878),
                             Description = "Savor the goodness of quinoa and black beans in our vegan burger, complemented by avocado slices and a touch of lime.",
                             Name = "Quinoa Black Bean Burger",
                             Picture = "quinoablackbeanburger.jpg",
@@ -964,7 +964,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4477),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4604),
                             Name = "Pepsi",
                             Picture = "pepsi.jpg",
                             Price = 1m,
@@ -973,7 +973,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 2,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4479),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4606),
                             Name = "Pepsi-Max",
                             Picture = "pepsimax.jpg",
                             Price = 1m,
@@ -982,7 +982,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 3,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4480),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4607),
                             Name = "Pepsi-Twist",
                             Picture = "pepsitwist.jpg",
                             Price = 1m,
@@ -991,7 +991,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 4,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4482),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4608),
                             Name = "Pepsi-Mango",
                             Picture = "pepsimango.jpg",
                             Price = 1m,
@@ -1000,7 +1000,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 5,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4483),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4610),
                             Name = "Pepsi-Raspberry",
                             Picture = "pepsiraspberry.jpg",
                             Price = 1m,
@@ -1009,7 +1009,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 6,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4484),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4611),
                             Name = "7UP",
                             Picture = "7up.jpg",
                             Price = 1m,
@@ -1018,7 +1018,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 7,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4485),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4612),
                             Name = "Fanta",
                             Picture = "fanta.jpg",
                             Price = 1m,
@@ -1027,7 +1027,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 8,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4487),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4613),
                             Name = "Ice-Tea Lemon",
                             Picture = "icetealemon.jpg",
                             Price = 1m,
@@ -1036,7 +1036,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 9,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4488),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4614),
                             Name = "Ice-Tea Peach",
                             Picture = "iceteapeach.jpg",
                             Price = 1m,
@@ -1045,7 +1045,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 10,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4489),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4615),
                             Name = "Ayran",
                             Picture = "ayran.jpg",
                             Price = 2m,
@@ -1054,7 +1054,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 11,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4490),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4616),
                             Name = "Chocolate Milkshake",
                             Picture = "chocolatemilkshake.jpg",
                             Price = 1.5m,
@@ -1063,7 +1063,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 12,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4492),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4617),
                             Name = "Strawberry Milkshake",
                             Picture = "strawberrymilkshake.jpg",
                             Price = 1.5m,
@@ -1072,7 +1072,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 13,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4493),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4618),
                             Name = "Vanilla Milkshake",
                             Picture = "vanillamilkshake.jpg",
                             Price = 1.5m,
@@ -1106,268 +1106,415 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4180),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4358),
                             Name = "Beef Patty",
                             Price = 5m
                         },
                         new
                         {
                             ID = 2,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4190),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4368),
                             Name = "Spicy Beef Patty",
                             Price = 5m
                         },
                         new
                         {
                             ID = 3,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4191),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4370),
                             Name = "Double Beef Patty",
                             Price = 8m
                         },
                         new
                         {
                             ID = 4,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4192),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4371),
                             Name = "Grilled Chicken Patty",
                             Price = 4m
                         },
                         new
                         {
                             ID = 5,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4193),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4372),
                             Name = "Crispy Fried Chicken Patty",
                             Price = 5m
                         },
                         new
                         {
                             ID = 6,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4195),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4373),
                             Name = "Veggie Patty",
                             Price = 3m
                         },
                         new
                         {
                             ID = 7,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4196),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4374),
                             Name = "Portobello Mushroom Patty",
                             Price = 3m
                         },
                         new
                         {
                             ID = 8,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4197),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4375),
                             Name = "Vegan Patty (Protein-rich)",
                             Price = 4m
                         },
                         new
                         {
                             ID = 9,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4198),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4376),
                             Name = "Quinoa Black Bean Patty",
                             Price = 5m
                         },
                         new
                         {
                             ID = 10,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4199),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4377),
                             Name = "Lettuce",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 11,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4202),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4379),
                             Name = "Tomato",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 12,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4203),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4380),
                             Name = "Onion",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 13,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4204),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4381),
                             Name = "Caramelized Onions",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 14,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4205),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4382),
                             Name = "Onion Rings",
                             Price = 0.50m
                         },
                         new
                         {
                             ID = 15,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4206),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4383),
                             Name = "Pickles",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 16,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4207),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4384),
                             Name = "Jalapenos",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 17,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4208),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4385),
                             Name = "Cheese",
                             Price = 1m
                         },
                         new
                         {
                             ID = 18,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4210),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4387),
                             Name = "Pepper Jack Cheese",
                             Price = 1m
                         },
                         new
                         {
                             ID = 19,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4211),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4388),
                             Name = "Swiss Cheese",
                             Price = 1m
                         },
                         new
                         {
                             ID = 20,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4212),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4389),
                             Name = "Bacon",
                             Price = 1m
                         },
                         new
                         {
                             ID = 21,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4213),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4390),
                             Name = "Sauteed Mushrooms",
                             Price = 0.50m
                         },
                         new
                         {
                             ID = 22,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4214),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4391),
                             Name = "Cucumber",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 23,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4215),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4392),
                             Name = "Roasted Red Peppers",
                             Price = 0.50m
                         },
                         new
                         {
                             ID = 24,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4216),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4393),
                             Name = "Arugula",
                             Price = 0.50m
                         },
                         new
                         {
                             ID = 25,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4217),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4394),
                             Name = "Avocado Slices",
                             Price = 1m
                         },
                         new
                         {
                             ID = 26,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4218),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4395),
                             Name = "Lime",
                             Price = 0.50m
                         },
                         new
                         {
                             ID = 27,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4219),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4396),
                             Name = "Roasted Red Peppers",
                             Price = 0.50m
                         },
                         new
                         {
                             ID = 28,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4220),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4397),
                             Name = "House Sauce",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 29,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4221),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4398),
                             Name = "Mustard",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 30,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4222),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4399),
                             Name = "Mayo",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 31,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4223),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4400),
                             Name = "Chipotle Mayo",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 32,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4224),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4401),
                             Name = "Herb Mayo",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 33,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4225),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4402),
                             Name = "Ketchup",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 34,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4226),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4403),
                             Name = "BBQ Sauce",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 35,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4227),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4404),
                             Name = "Tangy Sauce",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 36,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4228),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4405),
                             Name = "Balsamic Glaze",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 37,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4229),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4406),
                             Name = "Garlic Aioli",
                             Price = 0.25m
                         },
                         new
                         {
                             ID = 38,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4230),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4407),
                             Name = "Cashew Cream Sauce",
                             Price = 0.25m
+                        });
+                });
+
+            modelBuilder.Entity("MVC_Burger_Project.Models.Entities.Menu", b =>
+                {
+                    b.Property<int>("MenuID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MenuID"), 1L, 1);
+
+                    b.Property<int>("BurgerID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DrinkID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SideID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SizeID")
+                        .HasColumnType("int");
+
+                    b.HasKey("MenuID");
+
+                    b.HasIndex("BurgerID");
+
+                    b.HasIndex("DrinkID");
+
+                    b.HasIndex("SideID");
+
+                    b.HasIndex("SizeID");
+
+                    b.ToTable("Menus");
+
+                    b.HasData(
+                        new
+                        {
+                            MenuID = 1,
+                            BurgerID = 1,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 2,
+                            BurgerID = 2,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 3,
+                            BurgerID = 3,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 4,
+                            BurgerID = 4,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 5,
+                            BurgerID = 5,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 6,
+                            BurgerID = 6,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 7,
+                            BurgerID = 7,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 8,
+                            BurgerID = 8,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 9,
+                            BurgerID = 9,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 10,
+                            BurgerID = 10,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 11,
+                            BurgerID = 11,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 12,
+                            BurgerID = 12,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 13,
+                            BurgerID = 13,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
+                        },
+                        new
+                        {
+                            MenuID = 14,
+                            BurgerID = 14,
+                            DrinkID = 1,
+                            SideID = 1,
+                            SizeID = 1
                         });
                 });
 
@@ -1468,7 +1615,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4578),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4684),
                             Name = "French Fries",
                             Picture = "frenchfries.jpg",
                             Price = 1m,
@@ -1477,7 +1624,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 2,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4580),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4686),
                             Name = "Curly Fries",
                             Picture = "curlyfries.jpg",
                             Price = 1.25m,
@@ -1486,7 +1633,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 3,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4581),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4688),
                             Name = "Serrated Fries",
                             Picture = "serratedfries.jpg",
                             Price = 1m,
@@ -1495,7 +1642,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 4,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4582),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4689),
                             Name = "Chicken Nuggets",
                             Picture = "chickennuggets.jpg",
                             Price = 2m,
@@ -1504,7 +1651,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 5,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4583),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4690),
                             Name = "Cheese Sticks",
                             Picture = "cheesesticks.jpg",
                             Price = 2m,
@@ -1513,7 +1660,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 6,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4585),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4692),
                             Name = "Onion Rings",
                             Picture = "onionrings.jpg",
                             Price = 1m,
@@ -1522,7 +1669,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 7,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4586),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4693),
                             Name = "Buffalo Wings",
                             Picture = "buffalowings.jpg",
                             Price = 2m,
@@ -1531,7 +1678,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 8,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4587),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4694),
                             Name = "Glaze Donut",
                             Picture = "glazedonut.jpg",
                             Price = 1.5m,
@@ -1540,7 +1687,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 9,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4588),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4695),
                             Name = "Apple Pie",
                             Picture = "applepie.jpg",
                             Price = 1.5m,
@@ -1549,7 +1696,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 10,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4590),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4697),
                             Name = "Souffle",
                             Picture = "souffle.jpg",
                             Price = 1.5m,
@@ -1586,7 +1733,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 1,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4661),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4762),
                             Name = "Small",
                             Price = 0m,
                             Quantity = 0
@@ -1594,7 +1741,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 2,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4662),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4763),
                             Name = "Medium",
                             Price = 1m,
                             Quantity = 0
@@ -1602,7 +1749,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 3,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4663),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4764),
                             Name = "Large",
                             Price = 2m,
                             Quantity = 0
@@ -1610,7 +1757,7 @@ namespace MVC_Burger_Project.Migrations
                         new
                         {
                             ID = 4,
-                            CreationDate = new DateTime(2023, 8, 27, 16, 20, 22, 297, DateTimeKind.Local).AddTicks(4664),
+                            CreationDate = new DateTime(2023, 8, 28, 10, 1, 58, 607, DateTimeKind.Local).AddTicks(4766),
                             Name = "X-Large",
                             Price = 3m,
                             Quantity = 0
@@ -1780,6 +1927,41 @@ namespace MVC_Burger_Project.Migrations
                     b.Navigation("Burger");
 
                     b.Navigation("Ingredient");
+                });
+
+            modelBuilder.Entity("MVC_Burger_Project.Models.Entities.Menu", b =>
+                {
+                    b.HasOne("MVC_Burger_Project.Models.Entities.Burger", "Burger")
+                        .WithMany()
+                        .HasForeignKey("BurgerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MVC_Burger_Project.Models.Entities.Drink", "Drink")
+                        .WithMany()
+                        .HasForeignKey("DrinkID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MVC_Burger_Project.Models.Entities.Side", "Side")
+                        .WithMany()
+                        .HasForeignKey("SideID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MVC_Burger_Project.Models.Entities.Size", "Size")
+                        .WithMany()
+                        .HasForeignKey("SizeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Burger");
+
+                    b.Navigation("Drink");
+
+                    b.Navigation("Side");
+
+                    b.Navigation("Size");
                 });
 
             modelBuilder.Entity("MVC_Burger_Project.Models.Entities.Order", b =>

@@ -29,6 +29,7 @@ namespace MVC_Burger_Project.DAL
         public DbSet<Side>? Sides { get; set; }
         public DbSet<Order>? Orders { get; set; }
         public DbSet<Bill>? Bills { get; set; }
+        public DbSet<Menu> Menus { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -53,6 +54,7 @@ namespace MVC_Burger_Project.DAL
             builder.ApplyConfiguration<Size>(new Size_CFG());
             builder.ApplyConfiguration<Burger>(new Burger_CFG());
             builder.ApplyConfiguration<BurgerIngredient>(new BurgerIngredient_CFG());
+            builder.ApplyConfiguration<Menu>(new Menu_CFG());
 
             base.OnModelCreating(builder);
         }
