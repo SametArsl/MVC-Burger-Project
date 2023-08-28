@@ -61,7 +61,7 @@ namespace MVC_Burger_Project
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Burger}/{action=Index}/{id?}");
 
             app.MapRazorPages();
             app.UseCors( x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());

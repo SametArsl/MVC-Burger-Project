@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -25,6 +24,7 @@
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 <body>
+    <!-- header-start -->
     <header>
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area">
@@ -101,11 +101,13 @@
             </div>
         </div>
     </header>
+    <!-- header-end -->
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+
     <footer class="footer">
         <div class="footer_top">
             <div class="container">
@@ -196,6 +198,9 @@
             </div>
         </div>
     </footer>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script> *@
     <!-- JS here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
@@ -223,9 +228,6 @@
     <script src="js/mail-script.js"></script>
 
     <script src="js/main.js"></script>
-    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script> *@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
