@@ -17,7 +17,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 1,
                     Description = "A timeless favorite made with juicy beef patty, fresh lettuce, ripe tomatoes, and our special house sauce.",
                     Price = 7M,
-                    Picture = "classicbeefburger.jpg",
+                    Picture = "classicbeefburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -27,7 +27,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 1,
                     Description = "Indulge in the rich flavors of our savory beef patty topped with melted cheese, caramelized onions, and tangy pickles.",
                     Price = 8M,
-                    Picture = "savorybeefburger.jpg",
+                    Picture = "savorybeefburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -37,7 +37,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 1,
                     Description = "For those who crave heat, our spicy beef burger features a fiery patty, jalapeños, and pepper jack cheese.",
                     Price = 8M,
-                    Picture = "spicybeefburger.jpg",
+                    Picture = "spicybeefburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -47,7 +47,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 1,
                     Description = "Double the cheese, double the satisfaction! Enjoy our beef patty layered with multiple cheese varieties and a burst of flavors.",
                     Price = 8M,
-                    Picture = "cheeseloversbeefburger.jpg",
+                    Picture = "cheeseloversbeefburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -57,7 +57,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 1,
                     Description = "Dive into the smoky goodness of our BBQ beef burger, featuring a char-grilled patty, crispy bacon, and tangy barbecue sauce.",
                     Price = 10M,
-                    Picture = "bbqbeefburger.jpg",
+                    Picture = "bbqbeefburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -67,7 +67,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 1,
                     Description = "A gourmet delight with a beef patty topped with sautéed mushrooms and melted Swiss cheese.",
                     Price = 9M,
-                    Picture = "mushroomswissbeefburger.jpg",
+                    Picture = "mushroomswissbeefburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -77,7 +77,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 1,
                     Description = "For the bacon enthusiasts, our deluxe beef burger includes a generous helping of crispy bacon, lettuce, and creamy mayo.",
                     Price = 10M,
-                    Picture = "bacondeluxebeefburger.jpg",
+                    Picture = "bacondeluxebeefburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -87,7 +87,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 1,
                     Description = "When one patty isn't enough, enjoy the indulgence of a double beef patty burger with all your favorite toppings.",
                     Price = 15M,
-                    Picture = "doublepattybeefburger.jpg",
+                    Picture = "doublepattybeefburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -97,7 +97,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 2,
                     Description = "A healthier option featuring a tender grilled chicken patty, lettuce, tomatoes, and zesty herb mayo.",
                     Price = 8M,
-                    Picture = "grilledchickenburger.jpg",
+                    Picture = "grilledchickenburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -107,7 +107,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 2,
                     Description = "Satisfy your cravings with our crispy fried chicken patty topped with fresh veggies and tangy sauce.",
                     Price = 9M,
-                    Picture = "crispychickenburger.jpg",
+                    Picture = "crispychickenburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -117,7 +117,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 3,
                     Description = "A garden-fresh delight with a hearty veggie patty, lettuce, tomatoes, and a drizzle of balsamic glaze.",
                     Price = 11M,
-                    Picture = "veggiedelightburger.jpg",
+                    Picture = "veggiedelightburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -127,7 +127,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 3,
                     Description = "Experience the earthy flavors of our portobello mushroom patty topped with roasted red peppers and garlic aioli.",
                     Price = 12M,
-                    Picture = "portobellomushroomburger.jpg",
+                    Picture = "portobellomushroomburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -137,7 +137,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 4,
                     Description = "A feast for plant-based eaters, our ultimate vegan burger features a protein-rich patty, avocado, and cashew cream sauce.",
                     Price = 14M,
-                    Picture = "ultimateveganburger.jpg",
+                    Picture = "ultimateveganburger.png",
                     Quantity = 1,
                 },
                 new Burger
@@ -147,7 +147,7 @@ namespace MVC_Burger_Project.DAL.EntityConfigurations
                     CategoryID = 4,
                     Description = "Savor the goodness of quinoa and black beans in our vegan burger, complemented by avocado slices and a touch of lime.",
                     Price = 15M,
-                    Picture = "quinoablackbeanburger.jpg",
+                    Picture = "quinoablackbeanburger.png",
                     Quantity = 1,
                 }
                 );

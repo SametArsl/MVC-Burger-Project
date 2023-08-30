@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible">
-    <title>Burger</title>
+    <title>BarCode Burger</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/slicknav.css">
     <link rel="stylesheet" href="/css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <!-- <link rel="stylesheet" href="/css/responsive.css"> -->
 </head>
 <body>
     <!-- header-start -->
@@ -34,31 +34,18 @@
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" asp-action="Index" asp-controller="Burger">home</a></li>
-                                        <li><a href="Menu.html">Menu</a></li>
-                                        <li><a asp-action="AboutUs" asp-controller="Burger">About Us</a></li>
-                                        <li>
-                                            <a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a asp-action="Index" asp-controller="Burger" name="Index" id="indexLink">Home</a></li>
+                                        <li><a asp-action="Index" asp-controller="Menu" name="Menu" id="menuLink">Menu</a></li>
+                                        <li><a asp-action="AboutUs" asp-controller="Burger" name="AboutUs" id="aboutusLink">About Us</a></li>
+                                        <li><a asp-action="Contact" asp-controller="Burger" id="contactLink">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
-                                <a href="index.html">
-                                    <img src="/img/logo.png" alt="">
+                                <a asp-controller="Burger" asp-action="Index">
+                                    <img src="/img/newlogo.png" alt="">
                                 </a>
                             </div>
                         </div>
@@ -112,44 +99,32 @@
         <div class="footer_top">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="col-xl-6 col-md-6 col-lg-6">
                         <div class="footer_widget text-center ">
                             <h3 class="footer_title pos_margin">
-                                New York
+                                Kadıköy
                             </h3>
                             <p>
-                                5th flora, 700/D kings road, <br>
-                                green lane New York-1782 <br>
-                                <a href="#">info@burger.com</a>
+                                Caferağa, Mühürdar Cd. No:76,<br>
+                                34710 Kadıköy/İstanbul <br>
+                                <a href="mailto:yazilimbarcode@gmail.com">yazilimbarcode@gmail.com</a>
                             </p>
-                            <a class="number" href="#">+10 378 483 6782</a>
+                            <a class="number" href="tel:+902163472121">+90 216 347 21 21</a>
 
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="col-xl-6 col-md-6 col-lg-6">
                         <div class="footer_widget text-center ">
                             <h3 class="footer_title pos_margin">
-                                California
+                                Şişli
                             </h3>
                             <p>
-                                5th flora, 700/D kings road, <br>
-                                green lane New York-1782 <br>
+                                Maslak, Kat: 5, Büyükdere Cd. No:237,<br />
+                                34485 Şişli/İstanbul<br />
                                 <a href="#">info@burger.com</a>
                             </p>
-                            <a class="number" href="#">+10 378 483 6782</a>
+                            <a class="number" href="tel:+902163472121">+90 216 347 21 21</a>
 
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-12 col-lg-4">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Stay Connected
-                            </h3>
-                            <form action="#" class="newsletter_form">
-                                <input type="text" placeholder="Enter your mail">
-                                <button type="submit">Sign Up</button>
-                            </form>
-                            <p class="newsletter_text">Stay connect with us to get exclusive offer!</p>
                         </div>
                     </div>
                 </div>
@@ -158,23 +133,18 @@
                         <div class="socail_links text-center">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.instagram.com/barcodeburger">
                                         <i class="ti-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.x.com/barcodeburger">
                                         <i class="ti-twitter-alt"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/barcodeburger">
                                         <i class="ti-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-google-plus"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -190,6 +160,11 @@
                     <div class="col-xl-12">
                         <p class="copy_right text-center">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by BarCode Yazılım
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                        <p class="copy_right text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
@@ -198,9 +173,6 @@
             </div>
         </div>
     </footer>
-    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script> *@
     <!-- JS here -->
     <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="/js/vendor/jquery-1.12.4.min.js"></script>
@@ -229,6 +201,19 @@
     <script src="/js/mail-script.js"></script>
 
     <script src="/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbar = document.querySelector("#navigation").querySelectorAll("a");
+
+            navbar.forEach(element => {
+                element.addEventListener("click", function () {
+                    navbar.forEach(nav => nav.classList.remove("active"));
+                    this.classList.add("active");
+                });
+            });
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

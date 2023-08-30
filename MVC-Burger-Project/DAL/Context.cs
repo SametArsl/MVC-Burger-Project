@@ -30,6 +30,7 @@ namespace MVC_Burger_Project.DAL
         public DbSet<Order>? Orders { get; set; }
         public DbSet<Bill>? Bills { get; set; }
         public DbSet<Menu> Menus { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
