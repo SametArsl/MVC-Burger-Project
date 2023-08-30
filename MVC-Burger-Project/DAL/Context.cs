@@ -56,6 +56,7 @@ namespace MVC_Burger_Project.DAL
             builder.ApplyConfiguration<Burger>(new Burger_CFG());
             builder.ApplyConfiguration<BurgerIngredient>(new BurgerIngredient_CFG());
             builder.ApplyConfiguration<Menu>(new Menu_CFG());
+            builder.ApplyConfiguration<Sauce>(new Sauce_CFG());
 
             base.OnModelCreating(builder);
         }
