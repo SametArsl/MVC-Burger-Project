@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/slicknav.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/burger.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 <body>
@@ -35,7 +36,7 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a class="active" asp-action="Index" asp-controller="Burger">home</a></li>
-                                        <li><a href="Menu.html">Menu</a></li>
+                                        <li><a asp-controller="Burger" asp-action="Menu">Menu</a></li>
                                         <li><a asp-action="AboutUs" asp-controller="Burger">About Us</a></li>
                                         <li>
                                             <a href="#">blog <i class="ti-angle-down"></i></a>

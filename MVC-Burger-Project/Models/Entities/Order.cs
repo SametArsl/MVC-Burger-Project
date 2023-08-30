@@ -7,6 +7,7 @@
         public ICollection<Side>? Sides { get; set; }
         public ICollection<Sauce>? Sauces { get; set; }
         public ICollection<Size>? Sizes { get; set; }
+        public ICollection<Menu>? Menus { get; set; }
         public int Quantity { get; set; }
 
         public int? UserID { get; set; }

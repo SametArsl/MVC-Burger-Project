@@ -11,5 +11,6 @@
         public Drink Drink { get; set; }
         public Side Side { get; set; }
         public Size Size { get; set; }
+        public decimal TotalPrice { get { return Burger.Price + Drink.Price + Side.Price + Size.Price; } }
     }
 }
