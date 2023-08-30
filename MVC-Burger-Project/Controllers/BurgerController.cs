@@ -41,5 +41,21 @@ namespace MVC_Burger_Project.Controllers
             return View(menuModel);
 
         }
+
+        [HttpPost]
+        public IActionResult Contact(Feedback feedback)
+        {
+            //Feedback newFeedback = new Feedback()
+            //{
+            //    Name = feedback.Name,
+            //    Email = feedback.Email,
+            //    Comment = feedback.Comment,
+            //};
+
+            _context.Feedbacks.Add(feedback);
+            _context.SaveChanges();
+
+            return View();
+        }
     }
 }

@@ -69,12 +69,14 @@
             <hr />
             @foreach (Category item in Model.Categories)
             {
-
-                <h2 class="text-center"><b>@item.Name</b></h2>
+                <div id ="@item.Name">
+                    <br /><br /><br /><br /><br /><br />
+                    </div>
+                <h2 class="text-center" ><b>@item.Name</b></h2>
                 <br />
-                    <div class="row" id="@item.Name">
+                    <div class="row" >
                     @foreach (Menu menu in Model.Menus)
-                    {
+                    { 
                         @if (item.Name == menu.Burger.Category.Name)
                         {
                     
