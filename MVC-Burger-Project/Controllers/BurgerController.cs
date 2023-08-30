@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MVC_Burger_Project.DAL;
+using MVC_Burger_Project.Models.Entities;
 using MVC_Burger_Project.Models.ViewModels;
+using Newtonsoft.Json;
 
 namespace MVC_Burger_Project.Controllers
 {
@@ -18,7 +20,23 @@ namespace MVC_Burger_Project.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<Burger> highestPricedBurgers = new List<Burger>();
+            List<Category> categories = _context.Categories.ToList();
+
+            foreach (var category in categories)
+            {
+                var highestPriceBurger = _context.Burgers
+                    .Where(b => b.CategoryID == category.CategoryID)
+                    .OrderByDescending(b => b.Price)
+                    .FirstOrDefault();
+
+                if (highestPriceBurger != null)
+                {
+                    highestPricedBurgers.Add(highestPriceBurger);
+                }
+            }
+
+            return View(highestPricedBurgers);
         }
 
         public IActionResult AboutUs()

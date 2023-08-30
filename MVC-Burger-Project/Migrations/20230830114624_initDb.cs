@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MVC_Burger_Project.Migrations
 {
-    public partial class initDB : Migration
+    public partial class initDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -52,6 +52,22 @@ namespace MVC_Burger_Project.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Drinks", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Feedbacks",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CommentTime = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Feedbacks", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -507,8 +523,8 @@ namespace MVC_Burger_Project.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { 1, "7651a255-0810-4551-86f6-a3dd9300a089", "Manager", "MANAGER" },
-                    { 2, "d3a33a6b-e682-4590-8471-0f2e74327fd5", "Customer", "CUSTOMER" }
+                    { 1, "9f9107a8-5df4-4b2d-a9b8-a9950f31c6e4", "Manager", "MANAGER" },
+                    { 2, "9c92cafa-245c-4031-bc21-8d59723be3ba", "Customer", "CUSTOMER" }
                 });
 
             migrationBuilder.InsertData(
@@ -530,19 +546,19 @@ namespace MVC_Burger_Project.Migrations
                 columns: new[] { "ID", "CreationDate", "Name", "Picture", "Price", "Quantity" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6993), "Pepsi", "pepsi.jpg", 1m, 1 },
-                    { 2, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6995), "Pepsi-Max", "pepsimax.jpg", 1m, 1 },
-                    { 3, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6996), "Pepsi-Twist", "pepsitwist.jpg", 1m, 1 },
-                    { 4, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6997), "Pepsi-Mango", "pepsimango.jpg", 1m, 1 },
-                    { 5, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6998), "Pepsi-Raspberry", "pepsiraspberry.jpg", 1m, 1 },
-                    { 6, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6999), "7UP", "7up.jpg", 1m, 1 },
-                    { 7, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6999), "Fanta", "fanta.jpg", 1m, 1 },
-                    { 8, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7000), "Ice-Tea Lemon", "icetealemon.jpg", 1m, 1 },
-                    { 9, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7001), "Ice-Tea Peach", "iceteapeach.jpg", 1m, 1 },
-                    { 10, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7002), "Ayran", "ayran.jpg", 2m, 1 },
-                    { 11, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7003), "Chocolate Milkshake", "chocolatemilkshake.jpg", 1.5m, 1 },
-                    { 12, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7004), "Strawberry Milkshake", "strawberrymilkshake.jpg", 1.5m, 1 },
-                    { 13, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7005), "Vanilla Milkshake", "vanillamilkshake.jpg", 1.5m, 1 }
+                    { 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4330), "Pepsi", "pepsi.png", 1m, 1 },
+                    { 2, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4335), "Pepsi-Max", "pepsimax.png", 1m, 1 },
+                    { 3, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4336), "Pepsi-Twist", "pepsitwist.png", 1m, 1 },
+                    { 4, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4337), "Pepsi-Mango", "pepsimango.png", 1m, 1 },
+                    { 5, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4338), "Pepsi-Raspberry", "pepsiraspberry.png", 1m, 1 },
+                    { 6, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4339), "7UP", "7up.png", 1m, 1 },
+                    { 7, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4341), "Fanta", "fanta.png", 1m, 1 },
+                    { 8, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4342), "Ice-Tea Lemon", "icetealemon.png", 1m, 1 },
+                    { 9, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4343), "Ice-Tea Peach", "iceteapeach.png", 1m, 1 },
+                    { 10, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4344), "Ayran", "ayran.png", 2m, 1 },
+                    { 11, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4345), "Chocolate Milkshake", "chocolatemilkshake.png", 1.5m, 1 },
+                    { 12, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4347), "Strawberry Milkshake", "strawberrymilkshake.png", 1.5m, 1 },
+                    { 13, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4348), "Vanilla Milkshake", "vanillamilkshake.png", 1.5m, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -550,26 +566,26 @@ namespace MVC_Burger_Project.Migrations
                 columns: new[] { "ID", "CreationDate", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6731), "Beef Patty", 5m },
-                    { 2, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6744), "Spicy Beef Patty", 5m },
-                    { 3, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6745), "Double Beef Patty", 8m },
-                    { 4, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6746), "Grilled Chicken Patty", 4m },
-                    { 5, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6746), "Crispy Fried Chicken Patty", 5m },
-                    { 6, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6747), "Veggie Patty", 3m },
-                    { 7, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6748), "Portobello Mushroom Patty", 3m },
-                    { 8, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6749), "Vegan Patty (Protein-rich)", 4m },
-                    { 9, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6750), "Quinoa Black Bean Patty", 5m },
-                    { 10, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6750), "Lettuce", 0.25m },
-                    { 11, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6752), "Tomato", 0.25m },
-                    { 12, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6753), "Onion", 0.25m },
-                    { 13, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6754), "Caramelized Onions", 0.25m },
-                    { 14, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6756), "Onion Rings", 0.50m },
-                    { 15, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6757), "Pickles", 0.25m },
-                    { 16, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6758), "Jalapenos", 0.25m },
-                    { 17, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6759), "Cheese", 1m },
-                    { 18, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6761), "Pepper Jack Cheese", 1m },
-                    { 19, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6762), "Swiss Cheese", 1m },
-                    { 20, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6763), "Bacon", 1m }
+                    { 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3661), "Beef Patty", 5m },
+                    { 2, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3672), "Spicy Beef Patty", 5m },
+                    { 3, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3673), "Double Beef Patty", 8m },
+                    { 4, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3674), "Grilled Chicken Patty", 4m },
+                    { 5, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3675), "Crispy Fried Chicken Patty", 5m },
+                    { 6, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3676), "Veggie Patty", 3m },
+                    { 7, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3677), "Portobello Mushroom Patty", 3m },
+                    { 8, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3678), "Vegan Patty (Protein-rich)", 4m },
+                    { 9, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3679), "Quinoa Black Bean Patty", 5m },
+                    { 10, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3680), "Lettuce", 0.25m },
+                    { 11, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3683), "Tomato", 0.25m },
+                    { 12, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3684), "Onion", 0.25m },
+                    { 13, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3685), "Caramelized Onions", 0.25m },
+                    { 14, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3686), "Onion Rings", 0.50m },
+                    { 15, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3687), "Pickles", 0.25m },
+                    { 16, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3688), "Jalapenos", 0.25m },
+                    { 17, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3689), "Cheese", 1m },
+                    { 18, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3690), "Pepper Jack Cheese", 1m },
+                    { 19, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3691), "Swiss Cheese", 1m },
+                    { 20, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3692), "Bacon", 1m }
                 });
 
             migrationBuilder.InsertData(
@@ -577,24 +593,39 @@ namespace MVC_Burger_Project.Migrations
                 columns: new[] { "ID", "CreationDate", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 21, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6764), "Sauteed Mushrooms", 0.50m },
-                    { 22, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6765), "Cucumber", 0.25m },
-                    { 23, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6767), "Roasted Red Peppers", 0.50m },
-                    { 24, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6767), "Arugula", 0.50m },
-                    { 25, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6768), "Avocado Slices", 1m },
-                    { 26, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6769), "Lime", 0.50m },
-                    { 27, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6770), "Roasted Red Peppers", 0.50m },
-                    { 28, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6771), "House Sauce", 0.25m },
-                    { 29, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6771), "Mustard", 0.25m },
-                    { 30, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6773), "Mayo", 0.25m },
-                    { 31, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6774), "Chipotle Mayo", 0.25m },
-                    { 32, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6775), "Herb Mayo", 0.25m },
-                    { 33, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6775), "Ketchup", 0.25m },
-                    { 34, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6776), "BBQ Sauce", 0.25m },
-                    { 35, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6777), "Tangy Sauce", 0.25m },
-                    { 36, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6778), "Balsamic Glaze", 0.25m },
-                    { 37, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6779), "Garlic Aioli", 0.25m },
-                    { 38, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(6779), "Cashew Cream Sauce", 0.25m }
+                    { 21, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3693), "Sauteed Mushrooms", 0.50m },
+                    { 22, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3694), "Cucumber", 0.25m },
+                    { 23, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3695), "Roasted Red Peppers", 0.50m },
+                    { 24, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3696), "Arugula", 0.50m },
+                    { 25, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3697), "Avocado Slices", 1m },
+                    { 26, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3698), "Lime", 0.50m },
+                    { 27, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3699), "Roasted Red Peppers", 0.50m },
+                    { 28, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3700), "House Sauce", 0.25m },
+                    { 29, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3701), "Mustard", 0.25m },
+                    { 30, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3702), "Mayo", 0.25m },
+                    { 31, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3704), "Chipotle Mayo", 0.25m },
+                    { 32, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3705), "Herb Mayo", 0.25m },
+                    { 33, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3706), "Ketchup", 0.25m },
+                    { 34, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3707), "BBQ Sauce", 0.25m },
+                    { 35, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3708), "Tangy Sauce", 0.25m },
+                    { 36, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3708), "Balsamic Glaze", 0.25m },
+                    { 37, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3710), "Garlic Aioli", 0.25m },
+                    { 38, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(3710), "Cashew Cream Sauce", 0.25m }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Sauces",
+                columns: new[] { "ID", "CreationDate", "Name", "Picture", "Price", "Quantity" },
+                values: new object[,]
+                {
+                    { 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4960), "Mayonese", "mayonese.png", 0.25m, 1 },
+                    { 2, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4963), "Herb Mayo", "herbmayo.png", 0.25m, 1 },
+                    { 3, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4964), "Ketchup", "ketchup.png", 0.25m, 1 },
+                    { 4, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4965), "Mustard", "mustard.png", 0.25m, 1 },
+                    { 5, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4967), "Honey Mustard", "honeymustard.png", 0.25m, 1 },
+                    { 6, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4968), "BBQ", "bbq.png", 0.25m, 1 },
+                    { 7, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4969), "Buffalo", "buffalo.png", 0.25m, 1 },
+                    { 8, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4970), "Ranch", "ranch.png", 0.25m, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -602,16 +633,16 @@ namespace MVC_Burger_Project.Migrations
                 columns: new[] { "ID", "CreationDate", "Name", "Picture", "Price", "Quantity" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7202), "French Fries", "frenchfries.jpg", 1m, 1 },
-                    { 2, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7204), "Curly Fries", "curlyfries.jpg", 1.25m, 1 },
-                    { 3, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7206), "Serrated Fries", "serratedfries.jpg", 1m, 1 },
-                    { 4, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7206), "Chicken Nuggets", "chickennuggets.jpg", 2m, 1 },
-                    { 5, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7207), "Cheese Sticks", "cheesesticks.jpg", 2m, 1 },
-                    { 6, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7290), "Onion Rings", "onionrings.jpg", 1m, 1 },
-                    { 7, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7292), "Buffalo Wings", "buffalowings.jpg", 2m, 1 },
-                    { 8, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7293), "Glaze Donut", "glazedonut.jpg", 1.5m, 1 },
-                    { 9, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7294), "Apple Pie", "applepie.jpg", 1.5m, 1 },
-                    { 10, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7295), "Souffle", "souffle.jpg", 1.5m, 1 }
+                    { 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4447), "French Fries", "frenchfries.png", 1m, 1 },
+                    { 2, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4449), "Curly Fries", "curlyfries.png", 1.25m, 1 },
+                    { 3, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4451), "Serrated Fries", "serratedfries.png", 1m, 1 },
+                    { 4, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4452), "Chicken Nuggets", "chickennuggets.png", 2m, 1 },
+                    { 5, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4453), "Cheese Sticks", "cheesesticks.png", 2m, 1 },
+                    { 6, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4454), "Onion Rings", "onionrings.png", 1m, 1 },
+                    { 7, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4455), "Buffalo Wings", "buffalowings.png", 2m, 1 },
+                    { 8, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4457), "Glaze Donut", "glazedonut.png", 1.5m, 1 },
+                    { 9, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4458), "Apple Pie", "applepie.png", 1.5m, 1 },
+                    { 10, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4459), "Souffle", "souffle.png", 1.5m, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -619,10 +650,10 @@ namespace MVC_Burger_Project.Migrations
                 columns: new[] { "ID", "CreationDate", "Name", "Price", "Quantity" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7384), "Small", 0m, 0 },
-                    { 2, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7385), "Medium", 1m, 0 },
-                    { 3, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7386), "Large", 2m, 0 },
-                    { 4, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7387), "X-Large", 3m, 0 }
+                    { 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4533), "Small", 0m, 0 },
+                    { 2, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4534), "Medium", 1m, 0 },
+                    { 3, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4535), "Large", 2m, 0 },
+                    { 4, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4536), "X-Large", 3m, 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -630,20 +661,20 @@ namespace MVC_Burger_Project.Migrations
                 columns: new[] { "ID", "CategoryID", "CreationDate", "Description", "Name", "OrderID", "Picture", "Price", "Quantity" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7455), "A timeless favorite made with juicy beef patty, fresh lettuce, ripe tomatoes, and our special house sauce.", "Classic Beef Burger", null, "classicbeefburger.png", 7m, 1 },
-                    { 2, 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7457), "Indulge in the rich flavors of our savory beef patty topped with melted cheese, caramelized onions, and tangy pickles.", "Savory Beef Burger", null, "savorybeefburger.png", 8m, 1 },
-                    { 3, 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7458), "For those who crave heat, our spicy beef burger features a fiery patty, jalapeños, and pepper jack cheese.", "Spicy Beef Burger", null, "spicybeefburger.png", 8m, 1 },
-                    { 4, 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7459), "Double the cheese, double the satisfaction! Enjoy our beef patty layered with multiple cheese varieties and a burst of flavors.", "Cheese Lover's Beef Burger", null, "cheeseloversbeefburger.png", 8m, 1 },
-                    { 5, 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7461), "Dive into the smoky goodness of our BBQ beef burger, featuring a char-grilled patty, crispy bacon, and tangy barbecue sauce.", "BBQ Beef Burger", null, "bbqbeefburger.png", 10m, 1 },
-                    { 6, 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7462), "A gourmet delight with a beef patty topped with sautéed mushrooms and melted Swiss cheese.", "Mushroom Swiss Beef Burger", null, "mushroomswissbeefburger.png", 9m, 1 },
-                    { 7, 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7463), "For the bacon enthusiasts, our deluxe beef burger includes a generous helping of crispy bacon, lettuce, and creamy mayo.", "Bacon Deluxe Beef Burger", null, "bacondeluxebeefburger.png", 10m, 1 },
-                    { 8, 1, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7464), "When one patty isn't enough, enjoy the indulgence of a double beef patty burger with all your favorite toppings.", "Double Patty Beef Burger", null, "doublepattybeefburger.png", 15m, 1 },
-                    { 9, 2, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7465), "A healthier option featuring a tender grilled chicken patty, lettuce, tomatoes, and zesty herb mayo.", "Grilled Chicken Burger", null, "grilledchickenburger.png", 8m, 1 },
-                    { 10, 2, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7466), "Satisfy your cravings with our crispy fried chicken patty topped with fresh veggies and tangy sauce.", "Crispy Chicken Burger", null, "crispychickenburger.png", 9m, 1 },
-                    { 11, 3, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7467), "A garden-fresh delight with a hearty veggie patty, lettuce, tomatoes, and a drizzle of balsamic glaze.", "Veggie Delight Burger", null, "veggiedelightburger.png", 11m, 1 },
-                    { 12, 3, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7468), "Experience the earthy flavors of our portobello mushroom patty topped with roasted red peppers and garlic aioli.", "Portobello Mushroom Burger", null, "portobellomushroomburger.png", 12m, 1 },
-                    { 13, 4, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7470), "A feast for plant-based eaters, our ultimate vegan burger features a protein-rich patty, avocado, and cashew cream sauce.", "Ultimate Vegan Burger", null, "ultimateveganburger.png", 14m, 1 },
-                    { 14, 4, new DateTime(2023, 8, 29, 14, 8, 3, 733, DateTimeKind.Local).AddTicks(7471), "Savor the goodness of quinoa and black beans in our vegan burger, complemented by avocado slices and a touch of lime.", "Quinoa Black Bean Burger", null, "quinoablackbeanburger.png", 15m, 1 }
+                    { 1, 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4606), "A timeless favorite made with juicy beef patty, fresh lettuce, ripe tomatoes, and our special house sauce.", "Classic Beef Burger", null, "classicbeefburger.png", 7m, 1 },
+                    { 2, 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4609), "Indulge in the rich flavors of our savory beef patty topped with melted cheese, caramelized onions, and tangy pickles.", "Savory Beef Burger", null, "savorybeefburger.png", 8m, 1 },
+                    { 3, 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4610), "For those who crave heat, our spicy beef burger features a fiery patty, jalapeños, and pepper jack cheese.", "Spicy Beef Burger", null, "spicybeefburger.png", 8m, 1 },
+                    { 4, 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4612), "Double the cheese, double the satisfaction! Enjoy our beef patty layered with multiple cheese varieties and a burst of flavors.", "Cheese Lover's Beef Burger", null, "cheeseloversbeefburger.png", 8m, 1 },
+                    { 5, 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4613), "Dive into the smoky goodness of our BBQ beef burger, featuring a char-grilled patty, crispy bacon, and tangy barbecue sauce.", "BBQ Beef Burger", null, "bbqbeefburger.png", 10m, 1 },
+                    { 6, 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4614), "A gourmet delight with a beef patty topped with sautéed mushrooms and melted Swiss cheese.", "Mushroom Swiss Beef Burger", null, "mushroomswissbeefburger.png", 9m, 1 },
+                    { 7, 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4616), "For the bacon enthusiasts, our deluxe beef burger includes a generous helping of crispy bacon, lettuce, and creamy mayo.", "Bacon Deluxe Beef Burger", null, "bacondeluxebeefburger.png", 10m, 1 },
+                    { 8, 1, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4617), "When one patty isn't enough, enjoy the indulgence of a double beef patty burger with all your favorite toppings.", "Double Patty Beef Burger", null, "doublepattybeefburger.png", 15m, 1 },
+                    { 9, 2, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4618), "A healthier option featuring a tender grilled chicken patty, lettuce, tomatoes, and zesty herb mayo.", "Grilled Chicken Burger", null, "grilledchickenburger.png", 8m, 1 },
+                    { 10, 2, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4620), "Satisfy your cravings with our crispy fried chicken patty topped with fresh veggies and tangy sauce.", "Crispy Chicken Burger", null, "crispychickenburger.png", 9m, 1 },
+                    { 11, 3, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4621), "A garden-fresh delight with a hearty veggie patty, lettuce, tomatoes, and a drizzle of balsamic glaze.", "Veggie Delight Burger", null, "veggiedelightburger.png", 11m, 1 },
+                    { 12, 3, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4622), "Experience the earthy flavors of our portobello mushroom patty topped with roasted red peppers and garlic aioli.", "Portobello Mushroom Burger", null, "portobellomushroomburger.png", 12m, 1 },
+                    { 13, 4, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4623), "A feast for plant-based eaters, our ultimate vegan burger features a protein-rich patty, avocado, and cashew cream sauce.", "Ultimate Vegan Burger", null, "ultimateveganburger.png", 14m, 1 },
+                    { 14, 4, new DateTime(2023, 8, 30, 14, 46, 24, 341, DateTimeKind.Local).AddTicks(4627), "Savor the goodness of quinoa and black beans in our vegan burger, complemented by avocado slices and a touch of lime.", "Quinoa Black Bean Burger", null, "quinoablackbeanburger.png", 15m, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -901,6 +932,9 @@ namespace MVC_Burger_Project.Migrations
 
             migrationBuilder.DropTable(
                 name: "DrinkOrder");
+
+            migrationBuilder.DropTable(
+                name: "Feedbacks");
 
             migrationBuilder.DropTable(
                 name: "Menus");

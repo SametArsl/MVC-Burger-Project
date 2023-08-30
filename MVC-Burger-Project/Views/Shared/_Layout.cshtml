@@ -27,7 +27,7 @@
 <body>
     <!-- header-start -->
     <header>
-        <div class="header-area ">
+        <div class="header-area" style="z-index:15">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid p-0">
                     <div class="row align-items-center no-gutters">
@@ -36,7 +36,7 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a asp-action="Index" asp-controller="Burger" name="Index" id="indexLink">Home</a></li>
-                                        <li><a asp-action="Index" asp-controller="Menu" name="Menu" id="menuLink">Menu</a></li>
+                                        <li><a asp-action="Menu" asp-controller="Burger" name="Menu" id="menuLink">Menu</a></li>
                                         <li><a asp-action="AboutUs" asp-controller="Burger" name="AboutUs" id="aboutusLink">About Us</a></li>
                                         <li><a asp-action="Contact" asp-controller="Burger" id="contactLink">Contact</a></li>
                                     </ul>
@@ -90,11 +90,17 @@
         </div>
     </header>
     <!-- header-end -->
+
     <div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+    <button type="button"
+            class="btn btn-warning btn-floating btn-lg"
+            id="btn-back-to-top">
+        <i class="fa-solid fa-circle-chevron-up"></i>
+    </button>
 
     <footer class="footer">
         <div class="footer_top">
@@ -175,6 +181,7 @@
         </div>
     </footer>
     <!-- JS here -->
+    <script src="/js/burger.js"></script>
     <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="/js/popper.min.js"></script>

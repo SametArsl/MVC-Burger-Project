@@ -1,4 +1,6 @@
-﻿<body>
+﻿@model List<Burger>
+
+<body>
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -56,7 +58,22 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-6 col-md-6 col-lg-6">
+                @foreach (Burger burger in Model)
+                {
+                    <div class="col-xl-6 col-md-6 col-lg-6">
+                        <div class="single_delicious d-flex align-items-center">
+                            <div class="thumb">
+                                <img src="img/burger/@burger.Picture" alt="">
+                            </div>
+                            <div class="info">
+                                <h3>@burger.Name</h3>
+                                <p>@burger.Description</p>
+                                <span>$@burger.Price</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @* <div class="col-xl-6 col-md-6 col-lg-6">
                     <div class="single_delicious d-flex align-items-center">
                         <div class="thumb">
                             <img src="img/burger/1.png" alt="">
@@ -153,12 +170,12 @@
                             <span>$5</span>
                         </div>
                     </div>
-                </div>
+                </div> *@
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="iteam_links">
-                        <a class="boxed-btn5" href="Menu.html">More Items</a>
+                        <a class="boxed-btn5" asp-controller="Burger" asp-action="Menu">More Items</a>
                     </div>
                 </div>
             </div>
@@ -197,39 +214,6 @@
         </div>
     </div>
     <!-- features_room_end -->
-    <!-- about_area_start -->
-    <div class="about_area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="about_thumb2">
-                        <div class="img_1">
-                            <img src="img/about/1.png" alt="">
-                        </div>
-                        <div class="img_2">
-                            <img src="img/about/2.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-5 offset-lg-1 col-md-6">
-                    <div class="about_info">
-                        <div class="section_title mb-20px">
-                            <span>About Us</span>
-                            <h3>
-                                Best Burger <br>
-                                in your City
-                            </h3>
-                        </div>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate</p>
-                        <div class="img_thumb">
-                            <img src="img/jessica-signature.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- about_area_end -->
     <!-- video_area_start -->
     <div class="video_area video_bg overlay">
         <div class="video_area_inner text-center">
@@ -239,7 +223,7 @@
             </h3>
             <span>How we make delicious Burger</span>
             <div class="video_payer">
-                <a href="https://www.youtube.com/watch?v=vLnPwxZdW4Y" class="video_btn popup-video">
+                <a href="https://www.youtube.com/watch?v=MHFXYBXj8Zs" class="video_btn popup-video">
                     <i class="fa fa-play"></i>
                 </a>
             </div>
