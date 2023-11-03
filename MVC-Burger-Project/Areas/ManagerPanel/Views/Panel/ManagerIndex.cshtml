@@ -1,0 +1,62 @@
+﻿<h1>Yönetim Paneli</h1>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="container col-md-4">
+        <table class="table table-bordered table-striped table-hover text-center" style="margin-bottom: 320px">
+            <tr>
+                <td>
+                    <a class="text-decoration-none mt-5 font-weight-bold" asp-area="ManagerPanel" asp-controller="Burger" asp-action="Index">
+                        <h3>Burgers</h3>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="text-decoration-none mt-5" asp-area="ManagerPanel" asp-controller="Category" asp-action="Index">
+                        <h3>Categories</h3>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="text-decoration-none mt-5" asp-area="ManagerPanel" asp-controller="Drink" asp-action="Index">
+                        <h3>Drinks</h3>
+                    </a>
+                </td>
+            </tr>
+            @* <tr>
+            <td>
+            <a asp-area="ManagerPanel" asp-controller="" asp-action="Index">Ingredients</a>
+            </td>
+            </tr> *@
+            <tr>
+                <td>
+                    <a class="text-decoration-none mt-5" asp-area="ManagerPanel" asp-controller="Sauce" asp-action="Index">
+                        <h3>Sauces</h3>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="text-decoration-none mt-5" asp-area="ManagerPanel" asp-controller="Side" asp-action="Index">
+                        <h3>Sides</h3>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="text-decoration-none" asp-area="ManagerPanel" asp-controller="Size" asp-action="Index">
+                        <h3>Sizes</h3>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

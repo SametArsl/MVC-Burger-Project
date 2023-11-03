@@ -1,0 +1,50 @@
+﻿@model MVC_Burger_Project.ModelVM.BurgerVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="row" style="margin-top:200px">
+    <div class="container col-md-4">
+        <h1 class="text-center">Edit</h1>
+        <h4 class="text-center">Edit Selected Burger Information</h4>
+        <hr />
+        <form asp-action="Edit" style="margin-top:50px">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Burger.ID" />
+            <div class="form-group">
+                <label asp-for="Burger.Name" class="control-label mt-2"></label>
+                <input asp-for="Burger.Name" class="form-control mt-2" />
+                <span asp-validation-for="Burger.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Burger.CategoryID" class="control-label mt-2">Category Name</label>
+                <select asp-for="Burger.CategoryID" class="form-control mt-2" asp-items="Model.Categories"></select>
+                <span asp-validation-for="Burger.CategoryID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Burger.Description" class="control-label"></label>
+                <input asp-for="Burger.Description" class="form-control mt-2" />
+                <span asp-validation-for="Burger.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Burger.Picture" class="control-label mt-2"></label>
+                <input asp-for="Burger.Picture" class="form-control mt-2" type="file" />
+                <span asp-validation-for="Burger.Picture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Burger.Price" class="control-label mt-2"></label>
+                <input asp-for="Burger.Price" class="form-control mt-2" />
+                <span asp-validation-for="Burger.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3 text-center" style="margin-bottom:220px">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-outline-dark text-center" style="margin-left:20px">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

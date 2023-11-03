@@ -1,16 +1,21 @@
 ﻿namespace MVC_Burger_Project.Models.Entities
 {
-    public class Order : BaseEntity
+    public class Order
     {
-        public ICollection<Burger>? Burgers { get; set; }
-        public ICollection<Drink>? Drinks { get; set; }
-        public ICollection<Side>? Sides { get; set; }
-        public ICollection<Sauce>? Sauces { get; set; }
-        public ICollection<Size>? Sizes { get; set; }
-        public ICollection<Menu>? Menus { get; set; }
-        public int Quantity { get; set; }
-
-        public int? UserID { get; set; }
+        public int OrderID { get; set; }
+        public int? DrinkID { get; set; }
+        public int? SizeID { get; set; }
+        public int? SideID { get; set; }
+        public int? SauceID { get; set; }
+        public int? BurgerID { get; set; }
+        public Burger? Burger { get; set; }
+        public Drink? Drink { get; set; }
+        public Side? Side { get; set; }
+        public Sauce? Sauce { get; set; }
+        public Size? Size { get; set; }
+        public int? Quantity { get; set; }
+        public decimal? TotalPrice { get; set; }
         public AppUser? AppUser { get; set; }
+        public bool? IsActive { get; set; }
     }
 }

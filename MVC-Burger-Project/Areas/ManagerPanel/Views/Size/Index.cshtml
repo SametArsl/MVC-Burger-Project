@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MVC_Burger_Project.Models.Entities.Size>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1 class="text-center text-black"><b class="text-black">Sizes</b></h1>
+
+<div class="row align-items-center mt-5">
+    <div class="container col-xl-10">
+        <p>
+            <a class="btn btn-warning" asp-action="Create"><b class="text-white">Add New Size</b></a>
+        </p>
+        <table class="table table-bordered table-striped table-hover table-responsive" style="margin-bottom: 320px">
+            <thead>
+                <tr>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td class="text-center">
+                            <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-success"><i class="fa-solid fa-pen-to-square text-white text-center"></i></a>
+                        </td>
+                        <td class="text-center">
+                            <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger"><i class="fa-solid fa-trash text-white text-center"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using MVC_Burger_Project.Models.Entities
+
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+
+<div class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div class="nav-item d-flex">
+            @{
+                var userName = UserManager.GetUserName(User);
+                var atIndex = userName.IndexOf('@');
+                var displayName = userName.Substring(0, atIndex);
+            }
+            <p id="manage" class="nav-link text-white" title="Manage">Hello @displayName!</p>
+        </div>
+
+        //Kullanıcıların rollere göre yetkilendirimesi burası,
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" style="height:10px; width:200px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Account
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body bg-black">
+                        @if (await UserManager.IsInRoleAsync(await UserManager.GetUserAsync(User), "Manager"))
+                        {
+                            <a asp-area="ManagerPanel" asp-controller="Panel" asp-action="ManagerIndex" class="text-decoration-none">Management Panel</a>
+                        }
+                        else
+                        {
+                            <a asp-area="CustomerPanel" asp-controller="Panel" asp-action="CustomerIndex" class="text-decoration-none">Customer Panel</a>
+                        }
+                        <form id="logoutForm" class="form-inline d-flex" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Burger", new { area = "" })">
+                            <button id="logout" type="submit" class="nav-link btn btn-link text-white"> &nbsp; Logout</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+    else
+    {
+        <div class="nav-item" style="display: flex;">
+            <a class="nav-link btn btn-outline-warning text-white ml-5" style="width:100px" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+            <a class="nav-link btn btn-outline-warning text-white ml-2" style="width:100px" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </div>
+    }
+</div>

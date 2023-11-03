@@ -1,0 +1,117 @@
+﻿@model MVC_Burger_Project.Models.ViewModels.MenuViewModel
+
+@{
+    ViewData["Title"] = "SelectAMenu";
+}
+
+<h1>Select a Menu</h1>
+
+<h4>Menu</h4>
+<hr />
+<div class="m-3">
+    <a asp-action="Menu" class="btn btn-outline-dark">Back to List</a>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-2 mt-lg-5">
+        <img src="~/img/burger/@Model.SelectedMenu.Burger.Picture" alt="" class="img-thumbnail">
+    </div>
+    <div class="col-md-4">
+    <form asp-action="SelectAMenu" method="post" class="col-md-6 ">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group" style="display: none;">
+            <input asp-for="SelectedMenu.MenuID" class="form-control" />
+        </div>
+        <div class="form-group" style="display:none">
+            <label asp-for="SelectedMenu.BurgerID" class="control-label">Burger:</label>
+            <input asp-for="SelectedMenu.BurgerID" class="form-control" readonly />
+        </div>
+            <div class="form-group">
+                <label asp-for="SelectedMenu.Burger.Name" class="control-label">Burger:</label>
+                <label asp-for="SelectedMenu.Burger.Name" id="SelectedMenu_Burger_Price" value="@Model.SelectedMenu.Burger.Price" class="form-control" readonly>@Model.SelectedMenu.Burger.Name</label>
+            </div>
+        <div class="form-group">
+            <label asp-for="SelectedMenu.DrinkID" class="control-label">Drink:</label>
+                @Html.DropDownListFor(x => x.SelectedMenu.DrinkID, Model.DrinkList, new { @class = "form-control", @id="SelectedMenu_Drink_Price" })
+        </div>
+        <div class="form-group">
+            <label asp-for="SelectedMenu.SideID" class="control-label">Side:</label>
+            @Html.DropDownListFor(x => x.SelectedMenu.SideID, Model.SideList, new { @class = "form-control",
+                @id="SelectedMenu_Side_Price"})
+        </div>
+        <div class="form-group">
+            <label asp-for="SelectedMenu.SizeID" class="control-label">Size:</label>
+                @Html.DropDownListFor(x => x.SelectedMenu.SizeID, Model.SizeList, new { @class = "form-control",@id="SelectedMenu_Size_Price" })
+        </div>
+        <div class="form-group">
+            <label asp-for="SelectedMenu.SauceID" class="control-label">Sauce:</label>
+                @Html.DropDownListFor(x => x.SelectedMenu.SauceID, Model.SauceList, new { @class = "form-control",@id="SelectedMenu_Saauce_Price" })
+        </div>
+        <div class="form-group">
+            <b>Ingredients:</b>
+            <div class="form-group" style="height: 200px; overflow: auto;">
+                <ul class="d-block">
+                    @foreach (BurgerIngredient ingredient in Model.SelectedMenu.Burger.BurgerIngredients)
+                    {
+                        <li>
+                            <input type="checkbox" id="@ingredient.IngredientID" name="selectedIngredients" value="@ingredient.IngredientID" checked>
+                            <label for="@ingredient.IngredientID">@ingredient.Ingredient.Name</label>
+                        </li>
+                    }
+@*                    @foreach (Ingredient ingredients in Model.Ingredients)
+                    {
+                        @if(Model.SelectedMenu.Burger.BurgerIngredients.Fi(ingredients.ID))
+                        <li>
+                            <input type="checkbox" id="@ingredients.ID" name="@ingredients.Name">
+                            <label for="@ingredients.ID">@ingredients.Name</label>
+                        </li>
+                    }*@
+                </ul>
+            </div>
+        </div>
+            <div class="form-group">
+                <label asp-for="Burger.Quantity" class="control-label">Quantity:</label>
+                <span>
+                    <input type="number" asp-for="Burger.Quantity" id="Burger_Quantity" class="form-control" min="1" value="1" />
+                </span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="TotalPrice" class="control-label">Total Price:</label>
+                <label asp-for="TotalPrice" class="control-label" id="TotalPriceLabel">$ </label>
+            </div>*@
+        <div class="form-group mt-3">
+            <input type="submit" value="Add To Cart" class="btn btn-outline-success" />
+        </div>
+    </form>
+    </div>
+</div>
+
+@*<script>
+    function calculateTotalPrice() {
+        var burgerPrice = parseFloat($("#SelectedMenu_Burger_Price").val());
+        var sizePrice = parseFloat($("#SelectedMenu_Size_Price").val());
+        var sidePrice = parseFloat($("#SelectedMenu_Side_Price").val());
+        var drinkPrice = parseFloat($("#SelectedMenu_Drink_Price").val());
+        var quantity = parseInt($("#Burger_Quantity").val());
+
+        var totalPrice = (burgerPrice + sizePrice + sidePrice + drinkPrice) * quantity;
+
+        $("#TotalPriceLabel").text("$ " + totalPrice.toFixed(2));
+    }
+
+    $(document).ready(function () {
+        $("#SelectedMenu_Burger_Price, #SelectedMenu_Size_Price, #SelectedMenu_Side_Price, #SelectedMenu_Drink_Price, #Burger_Quantity").change(function () {
+            calculateTotalPrice();
+        });
+
+        // Initial calculation
+        calculateTotalPrice();
+    });
+</script>*@
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

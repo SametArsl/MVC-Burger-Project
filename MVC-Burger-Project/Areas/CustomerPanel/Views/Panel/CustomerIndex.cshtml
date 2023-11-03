@@ -1,0 +1,20 @@
+﻿<h2 class="text-center" style="margin-top:200px">Customer Panel</h2>
+
+<div class="row justify-content-around mt-5">
+    <div class="card col-md-4" style="height:500px">
+        <p class="card-img-top text-center" style="font-size:100px; margin-top:50px"><i class="fa-solid fa-user"></i></p>
+        <div class="card-body text-center">
+            <h5 class="card-title mt-5">Account Options</h5>
+            <p class="card-text mt-3">To change your account information</p>
+            <a asp-area="CustomerPanel" asp-controller="Panel" asp-action="Edit" class="btn btn-primary mt-5">Click Here</a>
+        </div>
+    </div>
+    <div class="card col-md-4" style="height:500px">
+        <p class="card-img-top text-center" style="font-size:100px; margin-top:50px"><i class="fa-solid fa-cart-shopping"></i></p>
+        <div class="card-body text-center">
+            <h5 class="card-title mt-5">Order Information</h5>
+            <p class="card-text mt-3">To see your orders</p>
+            <a asp-area="CustomerPanel" asp-controller="Panel" asp-action="GetOrders" class="btn btn-primary mt-5">Click Here</a>
+        </div>
+    </div>
+</div>

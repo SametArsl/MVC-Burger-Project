@@ -2,7 +2,8 @@
 {
     public class Bill : BaseEntity
     {
-        public int OrderID { get; set; }
-        public Order? Order { get; set; }
+        public int UserID { get; set; }
+        public decimal TotalPrice { get; set; }
+        public AppUser AppUser { get; set; }
     }
 }

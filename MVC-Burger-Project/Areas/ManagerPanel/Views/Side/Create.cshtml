@@ -1,0 +1,42 @@
+﻿@model MVC_Burger_Project.ModelVM.BurgerVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="row" style="margin-top:200px">
+    <div class="container col-md-4">
+        <h1 class="text-center">Create</h1>
+
+        <h4 class="text-center">Add New Side to Menu</h4>
+        <hr />
+        <form asp-action="Create" style="margin-top:50px">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Side.Name" class="control-label"></label>
+                <input asp-for="Side.Name" class="form-control mt-2" />
+                <span asp-validation-for="Side.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Side.Picture" class="control-label mt-2"></label>
+                <input asp-for="Side.Picture" class="form-control mt-2" type="file" />
+                <span asp-validation-for="Side.Picture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Side.Price" class="control-label mt-2"></label>
+                <input asp-for="Side.Price" class="form-control mt-2" />
+                <span asp-validation-for="Side.Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3 text-center" style="margin-bottom:280px">
+                <input type="submit" value="Create" class="btn btn-warning" />
+                <a asp-action="Index" class="btn btn-outline-dark text-center" style="margin-left:20px">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

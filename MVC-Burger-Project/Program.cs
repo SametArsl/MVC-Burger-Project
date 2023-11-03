@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using MVC_Burger_Project.DAL;
@@ -21,27 +22,47 @@ namespace MVC_Burger_Project
                 option =>
                 {
                     option.Password.RequiredLength = 6;
-                }
-                ).AddEntityFrameworkStores<Context>();
+                })
+                .AddRoles<AppRole>()
+                .AddEntityFrameworkStores<Context>();
+
+            builder.Services.AddAuthentication(options =>//EKLENDÝ
+            {
+                options.DefaultScheme = IdentityConstants.ApplicationScheme;
+                options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+            });
 
             builder.Services.ConfigureApplicationCookie(
                 option =>
-                { // Düzenle
-                    // option.LoginPath = "/Register/Login";
-                    // option.AccessDeniedPath = "AccessDenied";
+                {
+                    option.LoginPath = "/Identity/Account/Login";
+                    option.AccessDeniedPath = new PathString("/Burger/AccessDenied");
                     option.Cookie.Name = "UserCookie";
-                    option.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+                    option.ExpireTimeSpan = TimeSpan.FromMinutes(10);
                     option.SlidingExpiration = true;
-                }
-                );
+                });
+
+            builder.Services.AddAuthorization(options =>//EKLENDÝÝ
+            {
+                options.AddPolicy("RequireAdminRole", policy =>
+                {
+                    policy.RequireRole("Manager");
+                });
+
+            });
+
+            builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment())
+            if (app.Environment.IsDevelopment())//EKLENDÝ
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 

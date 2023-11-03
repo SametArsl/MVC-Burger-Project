@@ -1,0 +1,62 @@
+﻿@model MVC_Burger_Project.Models.Entities.Drink
+
+@{
+    ViewData["Title"] = "Details";
+    string imageFolderPath = "/img/drink/";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<hr />
+<div class="row align-items-center ">
+    <div class="container col-xl-8">
+<h1>Details</h1>
+
+<div>
+    <h4>Drink</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+        <dd class = "col-sm-10">
+           <img src="@($"{imageFolderPath}{Model.Picture}")" width="150" height="150" />
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+    </dl>
+</div>
+   
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ID">Edit</a> 
+   
+</div>
+    </div>
+</div>
+        <a asp-action="Index">Back to List</a>
