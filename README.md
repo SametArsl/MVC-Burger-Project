@@ -9,7 +9,6 @@ Key Features:
 Review and explore different types of burgers along with their details
 Add and remove items from the shopping cart
 Customize your order (e.g., add extra toppings)
-Secure payment gateway integration for checkout
 User accounts for order history and tracking
 
 Technologies Used:
